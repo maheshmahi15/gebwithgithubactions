@@ -1,26 +1,5 @@
 name: sqa_automation_reusable
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write
-  actions: read
-  security-events: write
-'on':
-  workflow_call:
-    inputs:
-      suite:
-        description: Test Suite to execute
-        required: true
-        type: string
-      testUrl:
-        type: string
-        description: Test URL to be used
-        required: true
-      branch:
-        type: string
-        description: Test URL to be used
-        default: '${{ github.ref_name }}'
-        required: false
+'on': push
 jobs:
   sqa_test_automation_flow:
     name: sqa_automation_flow
