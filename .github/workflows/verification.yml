@@ -5,11 +5,6 @@ jobs:
     name: sqa_automation_flow
     runs-on: self-hosted
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v3
-        with:
-          ref: '${{ inputs.branch }}'
-          fetch-depth: 1
       - name: Run Test
         id: test_execution
         run: |
